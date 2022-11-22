@@ -12,9 +12,6 @@ import datetime as dt
 
 from pandas import DataFrame
 
-#Read the dataset
-#data = pd.read_csv('Dataset.csv')
-
 # Initialize Dash App
 app = Dash.Dash()
 
