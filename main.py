@@ -28,10 +28,10 @@ plot_bgcolor='rgba(0,0,0,0)')})])
 
 def update_ticker_graph(ticker):
     data_frame = pd.DataFrame(yf.download(tickers=ticker, period='1y', interval='1d'))
-
-    filtered_df = data_frame.drop(['Open', 'High', 'Low', 'Volume', 'Close'], axis=1)
-
-    figure = px.line(filtered_df)
+    
+    adj_close = data_frame['Adj Close']
+    
+    figure = px.line(adj_close)
     return figure
 
 # Run local server
